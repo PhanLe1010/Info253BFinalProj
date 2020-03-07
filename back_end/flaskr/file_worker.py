@@ -22,15 +22,7 @@ class FileWorker:
         '''
         return a dictionary contains top 10 words and their frequencies
         '''
-        word_frequency = dict()  # map word -> frequency
-
-        # extract words from original_text 
-        word_list = re.findall(r'\w+', self.original_text)
-        print(word_list)
-        if self.stop_word == 1:
-            pass
-        else:
-            pass
+        pass
 
     def extract_stem(self, word_list):
         '''
