@@ -32,3 +32,7 @@ ui angular
     ```
     flask init-db
     ```
+6. Download nltk data. This is use to find stop word and covert stem word
+    ```
+    
+    ```
