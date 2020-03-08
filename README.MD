@@ -19,9 +19,9 @@
 require: python3, nodejs v12.0.0, sqlite3
 
 # Set up Flask server
-1. cd into back-end folder 
+1. cd into back_end folder 
     ```
-    cd back-end
+    cd back_end
     ```
 1. Create an virutal environment
     ``` 
@@ -50,9 +50,9 @@ require: python3, nodejs v12.0.0, sqlite3
     ```
 
 # Set up Angular cli server
-1. cd into front-end/word-analysis-app folder 
+1. cd into front_end/word-analysis-app folder 
     ```
-    cd front-end/word-analysis-app
+    cd front_end/word-analysis-app
     ```
 1. Install dependencies
     ```
