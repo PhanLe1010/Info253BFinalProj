@@ -50,7 +50,7 @@ require: python3, nodejs v12.0.0, sqlite3
     ```
 
 # Set up Angular cli server
-1. cd into front_end/word-analysis-app folder 
+1. open ad new terminal and cd into front_end/word-analysis-app folder 
     ```
     cd front_end/word-analysis-app
     ```
