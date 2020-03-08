@@ -16,6 +16,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -50,6 +51,7 @@ import { HistoryAnalysisComponent } from './history-analysis/history-analysis.co
     MatCheckboxModule,
     MatListModule,
     MatProgressBarModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

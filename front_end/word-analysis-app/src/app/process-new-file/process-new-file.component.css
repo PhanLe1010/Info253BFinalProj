@@ -3,6 +3,9 @@
   text-align: center;
 }
 
+.db-search-card{
+  padding-top: 30px;
+}
 .a-card{
   margin-top: 5px;
 }
@@ -27,6 +30,6 @@
 }
 
 ::ng-deep .sucess-snackbar {
-  background: #3f51b5;
+  background: #3f94b5;
   color: white;
 }
