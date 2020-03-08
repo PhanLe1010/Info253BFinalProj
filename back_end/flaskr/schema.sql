@@ -13,6 +13,6 @@ CREATE TABLE analysis (
   title TEXT NOT NULL,
   original_text TEXT NOT NULL,
   stop_word INTEGER NOT NULL,
-  top_ten_words TEXT NOT NULL,
+  top_25_words TEXT NOT NULL,
   FOREIGN KEY (user_id) REFERENCES user (id)
 );

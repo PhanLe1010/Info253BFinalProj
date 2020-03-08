@@ -1,0 +1,32 @@
+ /* For the search box */
+ .center-text{
+  text-align: center;
+}
+
+.a-card{
+  margin-top: 5px;
+}
+/* Style for error notification */
+
+.chip{
+  background: rgb(96, 159, 179);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+::ng-deep .error-snackbar {
+  background: red;
+  color: white;
+}
+
+::ng-deep .sucess-snackbar {
+  background: #3f51b5;
+  color: white;
+}

@@ -40,7 +40,7 @@ class FileWorker:
         self.user_id = user_id
         self.stop_word = stop_word
 
-    def get_top_ten_words(self):
+    def get_top_25_words(self):
         '''
         return a list contains top 10 words and their frequencies
         '''
@@ -64,8 +64,8 @@ class FileWorker:
         sorted_word_list = list(word_frequency.items())
         sorted_word_list.sort(key=lambda item: (item[1], item[0]), reverse=True)
 
-        top_ten_words = sorted_word_list[:10]
-        return top_ten_words
+        top_25_words = sorted_word_list[:25]
+        return top_25_words
 
     def convert_to_stem(self, word_list):
         '''

@@ -42,20 +42,20 @@ def process_new_document():
         conn.commit()
 
         file_w = file_worker.FileWorker(title, original_text, user_id, stop_word)
-        top_ten_words = file_w.get_top_ten_words()
+        top_25_words = file_w.get_top_25_words()
 
         # Save data
         conn = get_db()
         cursor = conn.execute(
-                'INSERT INTO analysis (user_id, title, original_text, stop_word, top_ten_words)'
+                'INSERT INTO analysis (user_id, title, original_text, stop_word, top_25_words)'
                 ' VALUES (?, ?, ?, ?, ?)',
-                (user_id, title, original_text, stop_word, str(top_ten_words))
+                (user_id, title, original_text, stop_word, str(top_25_words))
         )
         conn.commit()
 
         # Build and send the response
-        column = ['id', 'user_id', 'title', 'original_text', 'stop_word', 'top_ten_words']
-        res_data = dict(zip(column, [cursor.lastrowid, user_id, title, original_text, stop_word, top_ten_words]))
+        column = ['id', 'user_id', 'title', 'original_text', 'stop_word', 'top_25_words']
+        res_data = dict(zip(column, [cursor.lastrowid, user_id, title, original_text, stop_word, top_25_words]))
         resp = Response(json.dumps(res_data), status=201, mimetype='application/json')
     else:
         status_code = 400
@@ -82,7 +82,7 @@ def last_ten_files(user_id):
         ).fetchall() 
 
     # Build and send the response
-    column = ['id', 'user_id', 'created' ,'title', 'original_text', 'stop_word', 'top_ten_words']
+    column = ['id', 'user_id', 'created' ,'title', 'original_text', 'stop_word', 'top_25_words']
     res_data = {"analysises" : [ dict(zip(column, row)) for row in analysises ] }
     # convert datetime object to string so that it is serializable
     for analysis in res_data["analysises"]:

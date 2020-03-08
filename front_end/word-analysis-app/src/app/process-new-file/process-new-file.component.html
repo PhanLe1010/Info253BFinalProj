@@ -1,0 +1,59 @@
+<!-- search box -->
+<mat-card class="db-search-card">
+  <mat-card-content class="center-text">
+    <form [formGroup]="newFileForm" (ngSubmit)="onSubmit(newFileForm)">
+      <input
+        placeholder="Select .txt file"
+        formControlName="file"
+        type="file"
+        (change)="readFile($event)"
+      />
+
+      <span style="padding: 10px"></span>
+
+      <mat-checkbox class="example-margin" formControlName="stop_word"
+        >Exclude stop words?</mat-checkbox
+      >
+
+      <div class="center-text">
+        <br />
+        <button
+          type="submmit"
+          mat-stroked-button
+          color="primary"
+          [disabled]="!this.newFileForm.valid"
+        >
+          <mat-icon>cloud_upload</mat-icon>
+          Process
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<mat-progress-bar *ngIf="isLoadingResults" mode="indeterminate"></mat-progress-bar>
+
+<!-- Original Text -->
+<mat-card class="a-card" *ngIf="this.original_text">
+  <mat-card-header>
+    <mat-card-title>Original text</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{this.original_text}}
+    </p>
+  </mat-card-content>
+</mat-card>
+
+
+<!-- Result -->
+<mat-card class="a-card" *ngIf="this.top_25_words">
+    <mat-card-content class="center-text">
+      <mat-card-header>
+        <mat-card-title>Result for {{this.title}}</mat-card-title>
+      </mat-card-header>
+      <div class="flex-container">
+        <div class="chip" *ngFor="let word of this.top_25_words">{{word[0]}} : {{word[1]}}</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
