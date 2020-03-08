@@ -10,7 +10,7 @@
 # Overview of your solution
 * When user navigate to home page, a form will be displayed. user select a file using the front-end ui. The UI reads the .txt file and sends the content to back-end api.
 
-* On the back-end, if it is the first time use access the server, a new user_id will be generated and sorted inside table `user` in database. The back-end send back a json response contains `(title, original_content, top_25_words, user_id)`. The UI will dislay the result and save `user_id` to local_storage. 
+* On the back-end, if it is the first time use access the server, a new user_id will be generated and sorted inside table `user` in database. The back-end send back a json response contains `(title, original_content, top_25_words, user_id)`. The UI render webpage using the result and save `user_id` to local_storage. 
 
 * When use navigate to history page, UI will read `user_id` from local_storage and send request to back-end api. back-end will fetch the 10 most recently analysises and return a JSON response. Front-end will render the UI using the reponse.
 
