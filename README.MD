@@ -2,7 +2,7 @@
 libraries/frameworks you used
 OS: macOS
 
-require: python3, angular cli
+require: python3, nodejs, angular cli
 
 server: flask
 database: sqlite
