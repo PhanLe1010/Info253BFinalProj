@@ -1,6 +1,7 @@
 <!-- search box -->
 <mat-card class="db-search-card">
   <mat-card-content class="center-text">
+    <h2>Upload a .txt file</h2>
     <form [formGroup]="newFileForm" (ngSubmit)="onSubmit(newFileForm)">
       <input
         placeholder="Select .txt file"
@@ -33,6 +34,18 @@
 
 <mat-progress-bar *ngIf="isLoadingResults" mode="indeterminate"></mat-progress-bar>
 
+<!-- Result -->
+<mat-card class="a-card" *ngIf="this.top_25_words">
+    <mat-card-content class="center-text">
+      <mat-card-header>
+        <mat-card-title>Result for {{this.title}}</mat-card-title>
+      </mat-card-header>
+      <div class="flex-container">
+        <div class="chip" *ngFor="let word of this.top_25_words">{{word[0]}} : {{word[1]}}</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
 <!-- Original Text -->
 <mat-card class="a-card" *ngIf="this.original_text">
   <mat-card-header>
@@ -46,14 +59,4 @@
 </mat-card>
 
 
-<!-- Result -->
-<mat-card class="a-card" *ngIf="this.top_25_words">
-    <mat-card-content class="center-text">
-      <mat-card-header>
-        <mat-card-title>Result for {{this.title}}</mat-card-title>
-      </mat-card-header>
-      <div class="flex-container">
-        <div class="chip" *ngFor="let word of this.top_25_words">{{word[0]}} : {{word[1]}}</div>
-      </div>
-    </mat-card-content>
-  </mat-card>
+

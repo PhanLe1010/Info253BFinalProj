@@ -25,4 +25,8 @@ export class FileProcessService {
     return this.http.post(url, data, {headers});
   }
 
+  get_last_ten_files(user_id: string){
+    const url = this.url + '/las_ten_files/' + user_id;
+    return this.http.get(url);
+  }
 }

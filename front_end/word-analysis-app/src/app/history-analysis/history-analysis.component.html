@@ -1,1 +1,40 @@
-<p>history-analysis works!</p>
+<!-- List of previous upload files -->
+<mat-card class="a-card">
+  <mat-card-content class="center-text">
+    <h2>Previously uploaded files</h2>
+    <button
+      mat-stroked-button
+      class="item"
+      *ngFor="let analysis of this.history"
+      (click)="this.select_file(analysis.id)"
+      [color]="this.file_id==analysis.id?'accent':'primary'"
+    >
+      {{analysis.title}}
+    </button>
+  </mat-card-content>
+</mat-card>
+
+<!-- Result -->
+<mat-card class="a-card" *ngIf="this.top_25_words">
+    <mat-card-content>
+      <mat-card-header>
+        <mat-card-title>Result for {{this.title}}</mat-card-title>
+        <mat-card-subtitle>Exclude stop word: {{this.stop_word}}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="flex-container">
+        <div class="chip" *ngFor="let word of this.top_25_words">{{word[0]}} : {{word[1]}}</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+<!-- Original Text -->
+<mat-card class="a-card" *ngIf="this.original_text">
+  <mat-card-header>
+    <mat-card-title>Original text</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{this.original_text}}
+    </p>
+  </mat-card-content>
+</mat-card>
