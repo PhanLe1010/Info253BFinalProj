@@ -7,7 +7,7 @@
 4. NLTK library <br>
     To extract stem words and stopwords
 
-# Overview of your solution
+# Overview of the App
 * When user navigate to home page, a form will be displayed. user select a file using the front-end ui. The UI reads the .txt file and sends the content to back-end api.
 
 * On the back-end, if it is the first time use access the server, a new user_id will be generated and sorted inside table `user` in database. The back-end send back a json response contains `(title, original_content, top_25_words, user_id)`. The UI render webpage using the result and save `user_id` to local_storage. 
