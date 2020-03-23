@@ -1,3 +1,18 @@
+# Team
+1. Melody Yan,
+1. Duy Nguyen,
+1. Khang Nguyen,
+1. Phan Le, phanle@berkerley.edu
+1. Xinlin Zhou,
+
+# Overview
+Build a webapp that performs word frequency analysis and spelling check on user-supplied text documents.
+
+1. The application should accept an uploaded text document from the user, count how often each word is used in it, and report the top 25 most frequently used words via a web page.
+2. In order to make the results more useful, the analysis should extract the stems of the words so that different inflections of the same word are all counted in the same bucket. To keep things simple for this exercise, please write stemming code that passes the test cases in the attached “regular stemming cases.txt” document, by converting all “equivalent forms” of listed verbs to their corresponding “stem.”
+3. Exclude these common English stop words from your counts. Allow the user to decide whether to exclude stop words from their analysis.
+Save the most recent 10 frequency analyses (original text, stop words setting, and resulting word frequencies), allowing the user to navigate back to view a previous analysis for comparison. These persisted analyses should survive a restart of the server process.
+
 # Libraries/Frameworks
 1. back-end server: flask <br>
     To provide endpoint APIs.
