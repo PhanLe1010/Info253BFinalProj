@@ -4,7 +4,7 @@
 1. Khang Nguyen, knguyen1228@berkeley.edu
 1. Melody Yan, melodyyan@berkeley.edu
 1. Phan Le, phanle@berkerley.edu
-1. Xinlin Zhou, 
+1. Xinlin Zhou, xinlinzhou@berkeley.edu
 
 # Overview
 Build a webapp that performs word frequency analysis and spelling check on user-supplied text documents.
