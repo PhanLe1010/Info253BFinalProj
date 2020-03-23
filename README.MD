@@ -1,7 +1,8 @@
 # Team
-1. Melody Yan,
+
 1. Duy Nguyen, duy@berkeley.edu
 1. Khang Nguyen,
+1. Melody Yan,
 1. Phan Le, phanle@berkerley.edu
 1. Xinlin Zhou,
 
